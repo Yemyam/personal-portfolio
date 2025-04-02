@@ -1,5 +1,4 @@
 import {
-    Button,
     Timeline,
     TimelineBody,
     TimelineContent,
@@ -8,7 +7,6 @@ import {
     TimelineTime,
     TimelineTitle,
   } from "flowbite-react";
-import { HiArrowNarrowRight } from "react-icons/hi";
 
 interface ExperienceItem {
     startDate: string;
@@ -25,7 +23,7 @@ const experiences: ExperienceItem[] = [
         companyName: "Code The Change",
         jobTitle: "Student Developer",
         description: [
-            "Mantaining and expanding the Code The Change Website,"
+            "Mantaining and expanding the Code The Change Website."
         ],
     },
     {
@@ -34,7 +32,7 @@ const experiences: ExperienceItem[] = [
         companyName: "City of Calgary",
         jobTitle: "Swim Instructor",
         description: [
-            "Teaching students how to swim and providing important feedback"
+            "Teaching students how to swim and providing important feedback."
         ]
     }
 ]

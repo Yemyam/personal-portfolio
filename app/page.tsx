@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Intro from "@/components/Intro";
 import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full">
         <Intro/>
         <Experience/>
+        <Education/>
       </main>
     </div>
   );
