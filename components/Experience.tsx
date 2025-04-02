@@ -10,47 +10,52 @@ import {
   } from "flowbite-react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
+interface ExperienceItem {
+    startDate: string;
+    endDate: string;
+    companyName: string;
+    jobTitle: string;
+    description: string[];
+}
+
+const experiences: ExperienceItem[] = [
+    {
+        startDate: "October 2024",
+        endDate: "Present",
+        companyName: "Code The Change",
+        jobTitle: "Student Developer",
+        description: [
+            "Mantaining and expanding the Code The Change Website,"
+        ],
+    },
+    {
+        startDate: "April 2023",
+        endDate: "Present",
+        companyName: "City of Calgary",
+        jobTitle: "Swim Instructor",
+        description: [
+            "Teaching students how to swim and providing important feedback"
+        ]
+    }
+]
+
+
+
 const Experience = () => {
   return (
     <div className="flex flex-col gap-4">
         <h1 className="text-2xl font-bold">Experience</h1>
         <Timeline>
-        <TimelineItem>
-          <TimelinePoint />
-          <TimelineContent>
-            <TimelineTime>February 2022</TimelineTime>
-            <TimelineTitle>Application UI code in Tailwind CSS</TimelineTitle>
-            <TimelineBody>
-              Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
-              E-commerce & Marketing pages.
-            </TimelineBody>
-            <Button color="gray">
-              Learn More
-              <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-            </Button>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelinePoint />
-          <TimelineContent>
-            <TimelineTime>March 2022</TimelineTime>
-            <TimelineTitle>Marketing UI design in Figma</TimelineTitle>
-            <TimelineBody>
-              All of the pages and components are first designed in Figma and we keep a parity between the two versions
-              even as we update the project.
-            </TimelineBody>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelinePoint />
-          <TimelineContent>
-            <TimelineTime>April 2022</TimelineTime>
-            <TimelineTitle>E-Commerce UI code in Tailwind CSS</TimelineTitle>
-            <TimelineBody>
-              Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
-            </TimelineBody>
-          </TimelineContent>
-        </TimelineItem>
+        {experiences.map((item, index) => (
+            <TimelineItem key={index}>
+                <TimelinePoint />
+                <TimelineContent>
+                    <TimelineTime>{item.startDate} - {item.endDate}</TimelineTime>
+                    <TimelineTitle>{item.jobTitle} at {item.companyName}</TimelineTitle>
+                    <TimelineBody>{item.description}</TimelineBody>
+                </TimelineContent>
+            </TimelineItem>
+        ))}
       </Timeline>
     </div>
   )
