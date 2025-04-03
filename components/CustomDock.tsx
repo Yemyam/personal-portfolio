@@ -2,7 +2,7 @@
 
 import { CalendarIcon, HomeIcon, MailIcon, Moon, PencilIcon, Sun } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -94,14 +94,35 @@ const DATA = {
 };
 
 export function CustomDock({ 
-    orientation, 
 }: {
     orientation: "vertical" | "horizontal"
 }) {
     const { resolvedTheme, setTheme } = useTheme();
+    const [isMobile, setIsMobile] = useState(false)
+    const [mounted, setMounted] = useState(false)
+    
+    useEffect(() => {
+      setMounted(true);
+      setIsMobile(window.innerWidth <= 768);
+
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      }
+
+      window.addEventListener("resize", handleResize)
+
+      return () => {
+        window.removeEventListener("resize", handleResize)
+      }
+    }, [])
   return (
+    <div className={isMobile 
+      ? "fixed left-1/2 right-1/2 bottom-5 flex items-center justify-center"
+      : "fixed left-40 top-1/2 bottom-1/2 flex items-center justify-center"
+    }>
+    {mounted && (
       <TooltipProvider>
-        <Dock direction="middle" iconDistance={0} iconMagnification={0} orientation={orientation}>
+        <Dock direction="middle" iconDistance={0} iconMagnification={0} orientation={isMobile ? "horizontal" : "vertical"}>
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -123,7 +144,7 @@ export function CustomDock({
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="horizontal" className="h-full" />
+          <Separator orientation={isMobile ? "vertical" : "horizontal"} className="h-full" />
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
@@ -145,7 +166,7 @@ export function CustomDock({
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="horizontal" className="h-full" />
+          <Separator orientation={isMobile ? "vertical" : "horizontal"} className="h-full" />
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -164,6 +185,8 @@ export function CustomDock({
           </DockIcon>
         </Dock>
       </TooltipProvider>
+      )}
+    </div>
   );
 }
 

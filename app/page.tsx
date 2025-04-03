@@ -8,7 +8,7 @@ import CustomDock from "@/components/CustomDock";
 
 export default function Home() {
   return (
-    <div className="w-8/12 mx-auto items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="lg:w-8/12 md:w-7/12 sm:w-full mx-auto items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full">
         <Intro/>
         <Experience/>
@@ -16,9 +16,7 @@ export default function Home() {
         <Skills/>
         <Projects/>
         <ContactMe/>
-        <div className="fixed left-40 top-1/2 bottom-1/2 flex items-center justify-center">
-          <CustomDock orientation="vertical"/>
-        </div>
+        <CustomDock orientation="vertical"/>
       </main>
     </div>
   );
