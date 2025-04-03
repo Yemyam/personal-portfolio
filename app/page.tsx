@@ -4,6 +4,7 @@ import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
+import CustomDock from "@/components/CustomDock";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
         <Skills/>
         <Projects/>
         <ContactMe/>
+        <div className="fixed left-40 top-1/2 bottom-1/2 flex items-center justify-center">
+          <CustomDock orientation="vertical"/>
+        </div>
       </main>
     </div>
   );
