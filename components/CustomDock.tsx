@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, MailIcon, Moon, PencilIcon, Sun } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -13,7 +13,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { Dock, DockIcon } from "@/components/magicui/dock"; // Update the path to the correct location
+import { Dock, DockIcon } from "@/components/magicui/dock";
+import { useTheme } from "next-themes";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -97,6 +98,7 @@ export function CustomDock({
 }: {
     orientation: "vertical" | "horizontal"
 }) {
+    const { resolvedTheme, setTheme } = useTheme();
   return (
       <TooltipProvider>
         <Dock direction="middle" iconDistance={0} iconMagnification={0} orientation={orientation}>
@@ -121,7 +123,7 @@ export function CustomDock({
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="vertical" className="h-full" />
+          <Separator orientation="horizontal" className="h-full" />
           {Object.entries(DATA.contact.social).map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
@@ -143,11 +145,17 @@ export function CustomDock({
               </Tooltip>
             </DockIcon>
           ))}
-          <Separator orientation="vertical" className="h-full py-2" />
+          <Separator orientation="horizontal" className="h-full" />
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                {/* <ModeToggle className="rounded-full" /> */}
+                <div className="size-12 rounded-full flex items-center justify-center">
+                    {resolvedTheme === "dark" ? (
+                        <Sun className="size-4" onClick={() => setTheme("light")}/>
+                    ) : (
+                        <Moon className="size-4" onClick={() => setTheme("dark")}/>
+                    )}
+                </div>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Theme</p>
