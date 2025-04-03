@@ -18,7 +18,15 @@ const projectsData: Project[] = [
         code: "https://github.com/Yemyam/EcoPal",
         previewImage: "/images/ecopals.png",
         technologies: ["Next.js", "Tailwind CSS", "Supabase", "React"]
-    }
+    },
+    {
+        title: "Personal Portfolio",
+        description: "You are looking at it.",
+        link: "https://personal-portfolio-navy-one.vercel.app/",
+        code: "https://github.com/Yemyam/personal-portfolio",
+        previewImage: "/images/portfolio.png",
+        technologies: ["Next.js", "Tailwind CSS", "React", "Flowbite", "Shadcn"]
+    },
 ]
 
 const Projects = () => {
