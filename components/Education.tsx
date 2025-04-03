@@ -37,7 +37,7 @@ const Education = () => {
                 <TimelineContent>
                     <TimelineTime>{item.startDate} - {item.endDate}</TimelineTime>
                     <TimelineTitle>{item.Degree} at {item.schoolName}</TimelineTitle>
-                    <TimelineBody>{item.schoolLocation}</TimelineBody>
+                    <TimelineBody className="text-gray-700">{item.schoolLocation}</TimelineBody>
                 </TimelineContent>
             </TimelineItem>
         ))}

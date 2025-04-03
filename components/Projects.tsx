@@ -37,12 +37,12 @@ const Projects = () => {
                     </Image>
                     <div className="flex flex-col gap-2 p-2">
                         <h2 className="text-lg font-bold">{item.title}</h2>
-                        <p className="text-base text-gray-500">{item.description}</p>
+                        <p className="text-base dark:text-gray-500 text-gray-700">{item.description}</p>
                         <div className="flex gap-1 flex-wrap">
                             {item.technologies.map((tech, index) => (
                                 <div
                                     key={index}
-                                    className="flex border border-black rounded-md px-2 py-1 text-sm bg-teal-600 text-white"
+                                    className="flex border dark:border-black border-white rounded-md px-2 py-1 text-sm bg-teal-400 dark:text-white"
                                 >
                                     {tech}
                                 </div>

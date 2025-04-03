@@ -20,7 +20,7 @@ const Skills = () => {
         <h1 className="text-2xl font-bold">Skills</h1>
         <div className="flex flex-wrap gap-4 w-3/4">
             {skillsData.map((skill, index) => (
-                <div key={index} className="flex border border-black rounded-md p-4 bg-teal-600 text-white text-sm px-2 py-1">
+                <div key={index} className="flex border dark:border-black border-white rounded-md p-4 dark:bg-teal-600 dark:text-white text-sm px-2 py-1 bg-teal-400">
                     {skill}
                 </div>
             ))}

@@ -46,11 +46,11 @@ const Experience = () => {
         <Timeline>
         {experiences.map((item, index) => (
             <TimelineItem key={index}>
-                <TimelinePoint />
+                <TimelinePoint/>
                 <TimelineContent>
-                    <TimelineTime>{item.startDate} - {item.endDate}</TimelineTime>
+                    <TimelineTime className="dark:text-gray-500">{item.startDate} - {item.endDate}</TimelineTime>
                     <TimelineTitle>{item.jobTitle} at {item.companyName}</TimelineTitle>
-                    <TimelineBody>{item.description}</TimelineBody>
+                    <TimelineBody className="text-gray-700">{item.description}</TimelineBody>
                 </TimelineContent>
             </TimelineItem>
         ))}
