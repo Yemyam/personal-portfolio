@@ -32,7 +32,7 @@ const experiences: ExperienceItem[] = [
         companyName: "City of Calgary",
         jobTitle: "Swim Instructor",
         description: [
-            "Teaching students how to swim and providing important feedback."
+            "Instructing students on swimming techniques and providing important feedback."
         ]
     }
 ]

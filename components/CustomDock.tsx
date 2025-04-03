@@ -1,8 +1,8 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, Moon, PencilIcon, Sun } from "lucide-react";
+import { CalendarIcon, HomeIcon, MailIcon, Moon, PaperclipIcon, PencilIcon, Sun} from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -62,32 +62,33 @@ const Icons = {
   ),
 };
 
+{/* Add a blog button when I actually make one */}
+
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "#top", icon: HomeIcon, label: "Home" },
+    { href: "/pdfs/EthanBraumResume.pdf", icon: PaperclipIcon, label: "Resume" },
+    { href: "#", icon: PencilIcon, label: "Blog (WIP)" }
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/Yemyam",
         icon: Icons.github,
+        target: "_blank",
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/ethanbraum/",
         icon: Icons.linkedin,
-      },
-      X: {
-        name: "X",
-        url: "#",
-        icon: Icons.x,
+        target: "_blank",
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "#bottom",
         icon: Icons.email,
+        target: "",
       },
     },
   },
@@ -113,6 +114,7 @@ export function CustomDock({
 
       return () => {
         window.removeEventListener("resize", handleResize)
+
       }
     }, [])
   return (
@@ -150,6 +152,7 @@ export function CustomDock({
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
+                    target={social.target}
                     href={social.url}
                     aria-label={social.name}
                     className={cn(
@@ -172,9 +175,9 @@ export function CustomDock({
               <TooltipTrigger asChild>
                 <div className="size-12 rounded-full flex items-center justify-center">
                     {resolvedTheme === "dark" ? (
-                        <Sun className="size-4" onClick={() => setTheme("light")}/>
+                        <Moon className="size-4" onClick={() => setTheme("light")}/>
                     ) : (
-                        <Moon className="size-4" onClick={() => setTheme("dark")}/>
+                        <Sun className="size-4" onClick={() => setTheme("dark")}/>
                     )}
                 </div>
               </TooltipTrigger>

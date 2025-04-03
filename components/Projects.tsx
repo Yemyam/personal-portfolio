@@ -27,7 +27,7 @@ const Projects = () => {
         <h1 className="text-2xl font-bold">Projects</h1>
         <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
             {projectsData.map((item, index) => (
-               <div className="flex flex-col border-4 rounded-2xl border-gray-800 overflow-hidden" key={index}>
+               <div className="flex flex-col border-4 rounded-2xl dark:border-gray-800 border-black overflow-hidden" key={index}>
                     <Image src={item.previewImage} 
                         alt="project image" 
                         width={0}

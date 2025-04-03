@@ -2,7 +2,7 @@
 
 const Intro = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4" id="top">
         <div className="flex flex-col gap-4 w-9/12">
             <h1 className="text-4xl font-bold md:w-9/12 sm:w-full">Hi! I&apos;m Ethan.</h1>
             <p className="text-base text-gray-700 dark:text-gray-400">
