@@ -20,7 +20,7 @@ const educationItems: EducationItem[] = [
     {
         startDate: "September 2023",
         endDate: "Present",
-        schoolName: "University of Calgary",
+        schoolName: "the University of Calgary",
         Degree: "Computer Science",
         schoolLocation: "Calgary, Alberta"
     }
