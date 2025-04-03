@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "flowbite-react";
 
 interface Project {
     title: string;
@@ -26,20 +27,38 @@ const Projects = () => {
         <h1 className="text-2xl font-bold">Projects</h1>
         <div className="grid grid-cols-2 gap-4">
             {projectsData.map((item, index) => (
-               <div className="flex flex-col border border-gray-100" key={index}>
-                    <Image src={item.previewImage} alt="project image" width={500} height={500}></Image>
+               <div className="flex flex-col border-4 rounded-2xl border-gray-800 overflow-hidden" key={index}>
+                    <Image src={item.previewImage} 
+                        alt="project image" 
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: '100%', height: 'auto' }}>
+                    </Image>
                     <div className="flex flex-col gap-2 p-2">
                         <h2 className="text-lg font-bold">{item.title}</h2>
                         <p className="text-sm text-gray-500">{item.description}</p>
-                        <div className="flex gap-2">
+                        <div className="flex gap-1 flex-wrap">
                             {item.technologies.map((tech, index) => (
                                 <div
                                     key={index}
-                                    className="flex border border-gray-200 rounded-md px-2 py-1 text-sm bg-gray-500 text-white"
+                                    className="flex border border-black rounded-md px-2 py-1 text-sm bg-teal-600 text-white"
                                 >
                                     {tech}
                                 </div>
                             ))}
+                        </div>
+                        <div className="flex gap-2 mt-2">
+                        <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+                                View
+                            </span>
+                        </button>
+                        <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+                                Code
+                            </span>
+                        </button>
                         </div>
                     </div>
                </div> 
