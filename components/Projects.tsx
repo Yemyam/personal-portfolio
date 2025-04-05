@@ -21,7 +21,7 @@ const projectsData: Project[] = [
     },
     {
         title: "Personal Portfolio",
-        description: "You are looking at it.",
+        description: "You are looking at it. Built with Next.js with components from Shadcn and Flowbite!",
         link: "https://personal-portfolio-navy-one.vercel.app/",
         code: "https://github.com/Yemyam/personal-portfolio",
         previewImage: "/images/portfolio.png",
