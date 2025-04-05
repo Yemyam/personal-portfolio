@@ -17,7 +17,7 @@ const projectsData: Project[] = [
         link: "https://eco-pal-one.vercel.app/",
         code: "https://github.com/Yemyam/EcoPal",
         previewImage: "/images/ecopals.png",
-        technologies: ["Next.js", "Tailwind CSS", "Supabase", "React"]
+        technologies: ["Next.js", "Tailwind CSS","React", "Supabase", ]
     },
     {
         title: "Personal Portfolio",
@@ -27,6 +27,14 @@ const projectsData: Project[] = [
         previewImage: "/images/portfolio.png",
         technologies: ["Next.js", "Tailwind CSS", "React", "Flowbite", "Shadcn"]
     },
+    /*{
+        title: "Blog",
+        description: "A small blog that I built with Next.js for documenting my thoughts and journey in tech! Posts are markdown files that are parsed with gray-matter and dynamically routed to.",
+        link: "https://personal-portfolio-navy-one.vercel.app/",
+        code: "https://github.com/Yemyam/my-blog",
+        previewImage: "/images/portfolio.png",
+        technologies: ["Next.js", "Tailwind CSS", "Shadcn"]
+    },*/
 ]
 
 const Projects = () => {

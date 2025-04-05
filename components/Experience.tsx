@@ -23,7 +23,8 @@ const experiences: ExperienceItem[] = [
         companyName: "Code The Change",
         jobTitle: "Student Developer",
         description: [
-            "Mantaining and expanding the Code The Change Website."
+            "• Mantaining and expanding the Code The Change Website.",
+            "• Working in an Agile team utilizing Jira, Next.js, Tailwind CSS, Supabase and Contentful!"
         ],
     },
     {
@@ -32,7 +33,7 @@ const experiences: ExperienceItem[] = [
         companyName: "City of Calgary",
         jobTitle: "Swim Instructor",
         description: [
-            "Instructing students on swimming techniques and providing important feedback."
+            "• Instructing students on swimming techniques and providing important feedback."
         ]
     }
 ]
@@ -50,7 +51,7 @@ const Experience = () => {
                 <TimelineContent>
                     <TimelineTime className="dark:text-gray-500">{item.startDate} - {item.endDate}</TimelineTime>
                     <TimelineTitle>{item.jobTitle} at {item.companyName}</TimelineTitle>
-                    <TimelineBody className="text-gray-700">{item.description}</TimelineBody>
+                    <TimelineBody className="text-gray-700">{item.description[0]}<br/>{item.description[1]}</TimelineBody>
                 </TimelineContent>
             </TimelineItem>
         ))}
