@@ -20,10 +20,10 @@ const Intro = () => {
             </TypeAnimation>
           </h1>
           <p className="text-base text-gray-700 dark:text-gray-400">
-                I am a 2nd year <span className='text-teal-400 dark:text-teal-600 font-bold'>computer science student</span> at the University of Calgary. 
+                I am an incoming 3rd year <span className='text-teal-400 dark:text-teal-600 font-bold'>computer science student</span> at the University of Calgary. 
                 I am a passionate developer and I love to make cool projects. 
                 I am always looking to expand my skillset and learn new things.
-                Currently I am learning android development!
+                Currently I am furthering my full stack skills with Full Stack Open!
           </p>
         </div>
     </motion.div>

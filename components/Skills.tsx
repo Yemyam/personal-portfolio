@@ -13,7 +13,8 @@ const skillsData: string[] = [
     "Express",
     "SQL",
     "Java",
-    "Python"
+    "Python",
+    "MongoDB"
 ]
 
 const Skills = () => {

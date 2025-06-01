@@ -22,13 +22,13 @@ const experiences: ExperienceItem[] = [
         startDate: "October 2024",
         endDate: "Present",
         companyName: "Code The Change",
-        jobTitle: "Student Developer",
+        jobTitle: "Full Stack Developer",
         description: [
-            "• Mantaining and expanding the Code The Change Website.",
+            "• Maintaining and expanding the Code The Change Website.",
             "• Working in an Agile team utilizing Jira, Next.js, Tailwind CSS, Supabase and Contentful!"
         ],
         skills: [
-            "Jira", "Agile", "Next.js", "Tailwind CSS", "Supabase", "Figma"
+            "Jira", "Agile", "Next.js", "Tailwind CSS", "Supabase", "Figma", "Express"
         ]
     },
     {

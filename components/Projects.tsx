@@ -20,6 +20,14 @@ const projectsData: Project[] = [
         technologies: ["Next.js", "Tailwind CSS","React", "Supabase", ]
     },
     {
+        title: "BabbleBack (WIP)",
+        description: "An AI driven language learning app made with Nextjs. I wanted to build this to experiment with the openAI api and AWS poly for text to speech!",
+        link: "",
+        code: "https://github.com/Yemyam/Babbleback",
+        previewImage: "/images/babbleback.png",
+        technologies: ["Next.js", "AWS Poly", "React", "OpenAI API", "Express", "MongoDB"]
+    },
+    {
         title: "Personal Portfolio",
         description: "You are looking at it. Built with Next.js with components from Shadcn and Flowbite!",
         link: "https://personal-portfolio-navy-one.vercel.app/",
